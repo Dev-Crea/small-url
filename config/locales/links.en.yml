@@ -1,0 +1,8 @@
+en:
+  links:
+    create:
+      succes: Link was successfully created.
+    update:
+      succes: Link was sucessfully updated.
+    destroy:
+      succes: Link was sucessfully destroyed.

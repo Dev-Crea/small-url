@@ -1,0 +1,4 @@
+DuplicateMethodCall:
+  allow_calls:
+  - 'format.html'
+  - 'format.json'

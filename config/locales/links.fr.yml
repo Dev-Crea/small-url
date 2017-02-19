@@ -1,0 +1,8 @@
+fr:
+  links:
+    create:
+      succes: Le lien a été créé ace succès.
+    update:
+      succes: Le lien été mis à jour.
+    destroy:
+      succes: Le lien a été détruit avec succès.
