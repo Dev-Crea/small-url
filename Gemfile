@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'coffee-rails', '~> 4.2'
+gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'mongoid', '~> 6.1'
@@ -22,6 +23,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'erb2haml', '~> 0.1.5'
   gem 'listen', '~> 3.0.5'
   gem 'overcommit', '~> 0.38.0'
   gem 'spring'
