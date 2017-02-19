@@ -15,10 +15,10 @@
     - @links.each do |link|
       %tr
         %td= link.url
-        %td= link_with_key(link.key)
+        %td= link_to link_with_key(link.key), link_with_key(link.key)
         %td= ttl(link)
-        %td= link_to 'Show', link
-        %td= link_to 'Edit', edit_link_path(link)
-        %td= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Show', me_link_path(link)
+        %td= link_to 'Edit', edit_me_link_path(link)
+        %td= link_to 'Destroy', me_link_path(link), method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'New Link', new_link_path
+= link_to 'New Link', new_me_link_path

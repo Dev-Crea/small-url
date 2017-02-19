@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'links#index'
 
-  resources :links
+  resource :me do
+    resources :links
+  end
 end
