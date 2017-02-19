@@ -8,7 +8,7 @@ end
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
-gem 'mongo', '~> 2.4', '>= 2.4.1'
+gem 'mongoid', '~> 6.1'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.1'
 gem 'reek', '~> 4.5', '>= 4.5.6'
