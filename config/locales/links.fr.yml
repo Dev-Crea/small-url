@@ -1,8 +1,11 @@
 fr:
   links:
     create:
-      succes: Le lien a été créé ace succès.
+      success: Le lien a été créé avec succès.
     update:
-      succes: Le lien été mis à jour.
+      success: Le lien été mis à jour.
     destroy:
-      succes: Le lien a été détruit avec succès.
+      success: Le lien a été détruit avec succès.
+    new:
+      form:
+        expire_in: Le lien est détruit dans 24 heures par default.

@@ -1,8 +1,11 @@
 en:
   links:
     create:
-      succes: Link was successfully created.
+      success: Link was successfully created.
     update:
-      succes: Link was sucessfully updated.
+      success: Link was sucessfully updated.
     destroy:
-      succes: Link was sucessfully destroyed.
+      success: Link was sucessfully destroyed.
+    new:
+      form:
+        expire_in: Link was destroy in 24 hours by default.

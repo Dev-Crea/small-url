@@ -7,5 +7,13 @@
       %ul
         - link.errors.full_messages.each do |message|
           %li= message
+
+  = f.label :url
+  = f.text_field :url
+
+  = f.label :expire_in
+  = f.text_field :expire_in
+  %em= translation('form.expire_in')
+
   .actions
     = f.submit
