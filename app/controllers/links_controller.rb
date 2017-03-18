@@ -28,11 +28,9 @@ class LinksController < ApplicationController
   # POST /links
   # POST /links.json
   def create
-    @link = Link.new(link_params)
-
     respond_to do |format|
       if @link.save
-        format.html { redirect_to @link, notice: translation('success') }
+        format.html { redirect_link }
         format.json { render :show, status: :created, location: @link }
       else
         format.html { render :new }
@@ -46,7 +44,7 @@ class LinksController < ApplicationController
   def update
     respond_to do |format|
       if @link.update(link_params)
-        format.html { redirect_to @link, notice: translation('success') }
+        format.html { redirect_link }
         format.json { render :show, status: :ok, location: @link }
       else
         format.html { render :edit }
@@ -60,12 +58,16 @@ class LinksController < ApplicationController
   def destroy
     @link.destroy
     respond_to do |format|
-      format.html { redirect_to links_url, notice: translation('success') }
+      format.html { redirect_to me_links_url, notice: translation('success') }
       format.json { head :no_content }
     end
   end
 
   private
+
+  def redirect_link
+    redirect_to me_link_path(@link), notice: translation('success')
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_link
@@ -83,10 +85,11 @@ class LinksController < ApplicationController
   end
 
   def create_expire
-    Time.now.utc + expire_param.blank? ? 24.hours : expire_param.to_i.hour
+    Time.now.utc + (expire_param.blank? ? 24.hours : expire_param.to_i.hour)
   end
 
   def prepare_link
+    @link = Link.new(link_params)
     @link.expire_in = create_expire
     @link.key = SecureRandom.hex(4)
   end
